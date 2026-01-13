@@ -1,9 +1,13 @@
 import './App.css';
+import Dashboard from './Components/dashboard';
+import Navbar from './Components/navbar';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Navbar />
+      <Dashboard />
+    </>
   );
 }
 
