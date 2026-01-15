@@ -1,11 +1,14 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import Card from './card';
 
-function Dashboard() {
+function Dashboard({cards}) {
 
-  return (
+
+	return (
 		<div className='container my-3'>
-			<Card />
+			{cards.map(card => (
+				<Card key={card.id} data={card} />
+			))}
 		</div>
 	);
 }
