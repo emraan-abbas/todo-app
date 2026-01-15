@@ -14,10 +14,14 @@ function App() {
     ]);
   };
 
+  const onDelete = (id) => {
+    setCards(prev => prev.filter(card => card.id !== id))
+  }
+
   return (
     <>
       <Navbar onAdd={addCard} />
-      <Dashboard cards={cards} />
+      <Dashboard cards={cards} deleteFn={onDelete} />
     </>
   );
 }
